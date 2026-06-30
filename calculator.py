@@ -21,7 +21,7 @@ def calculate_gp(courses :list[dict]):
         total_course_units += course_units
 
     if total_units == 0 :
-        return 0
+        return (print("\nError: Total credit units cannot be zero. Cannot compute GP."))
 
     return round((total_points/total_course_units), 2)
 
