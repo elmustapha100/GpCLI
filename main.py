@@ -31,7 +31,7 @@ def main():
 
     total_units = sum(course["course_units"] for course in semester1_courses)
     print("Calculation complete")
-    print(f"Your GPA is \n{semester1_gpa}\nout of 5.00\nBased on {len(semester1_courses)} courses and {total_units} total units")
+    print(f"Your GPA is \n{gpa}\nout of 5.00\nBased on {len(semester1_courses)} courses and {total_units} total units")
     print("Ready to lock in your GPA?\nTrack your progress, study rigorously, and have a blast in all your courses.")
 
     check_cgpa = input("Do you want to check your cumulative grade point average for the session? (y/n): ")
