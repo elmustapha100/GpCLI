@@ -13,19 +13,14 @@ def calculate_gp(courses :list[dict]):
     total_points = 0 
 
     for course in courses : 
-        course_units = courses['course_units']
+        course_units = course['course_units']
         # grade = course["grade"].upper()
         grade_point = convert_grade_point(course["grade"])
 
         total_points += course_units * grade_point
-        total_course_units += course_units
-    try : 
-        if total_units == 0 :
-            raise ZeroDivisionError ("\nError: Total credit units cannot be zero. Cannot compute GP.")
-    except ZeroDivisionError as error:
-        print(error)
+        total_course_unit += course_units
 
-    return round((total_points/total_course_units), 2)
+    return round((total_points/total_course_unit), 2)
 
 #Calculating for Cumulative grade point average 
 def calculate_cgpa(semester1_courses: list[dict], semester2_courses: list[dict]) :
