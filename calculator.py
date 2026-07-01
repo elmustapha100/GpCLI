@@ -13,15 +13,17 @@ def calculate_gp(courses :list[dict]):
     total_points = 0 
 
     for course in courses : 
-        course_units = course['course_units']
+        course_units = courses['course_units']
         # grade = course["grade"].upper()
         grade_point = convert_grade_point(course["grade"])
 
         total_points += course_units * grade_point
         total_course_units += course_units
-
-    if total_units == 0 :
-        return (print("\nError: Total credit units cannot be zero. Cannot compute GP."))
+    try : 
+        if total_units == 0 :
+            raise ZeroDivisionError ("\nError: Total credit units cannot be zero. Cannot compute GP.")
+    except ZeroDivisionError as error:
+        print(error)
 
     return round((total_points/total_course_units), 2)
 
