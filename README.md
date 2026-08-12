@@ -28,6 +28,3 @@ A simple Python command-line GPA and CGPA calculator designed for Nigerian unive
    - grade
 4. View the semester GPA
 5. Optionally enter semester 2 to compute session CGPA
-
-.
-
