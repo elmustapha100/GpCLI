@@ -1,5 +1,5 @@
 from calculator import calculate_gp, calculate_cgpa
-
+from category import get_morale_message
 
 def course_details():
     """Collect course details from the user and return them as a list of dictionaries."""
@@ -39,6 +39,7 @@ def main():
         semester2_courses = course_details()
         cgpa = calculate_cgpa(semester1_courses, semester2_courses)
         print(f"Your CGPA for the session is \n{cgpa}")
+        print(get_morale_message(cgpa))
 
 
 if __name__ == "__main__":
