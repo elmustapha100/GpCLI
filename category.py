@@ -57,7 +57,7 @@ def get_morale_message(cgpa: float) -> str:
     if cgpa >= 4.50:
         quote = random.choice(first_class_quotes)
         return f"Congratulations! You made First Class.\n{quote}"
-    elif cgpa >= 3.00:
+    elif cgpa >= 3.50:
         quote = random.choice(first_class_quotes)
         return f"Good work. Keep building on this momentum.\n{quote}"
     else:
